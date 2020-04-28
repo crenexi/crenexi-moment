@@ -1,0 +1,53 @@
+{
+  "env": {
+    "development": {
+      "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+      ],
+      "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-object-rest-spread",
+        ["@babel/plugin-transform-runtime", { "regenerator": true }],
+        ["react-css-modules", {
+          "webpackHotModuleReloading": true,
+          "autoResolveMultipleImports": true,
+          "generateScopedName": "[name]__[local]___[hash:base64:5]",
+          "handleMissingStyleName": "warn",
+          "filetypes": {
+            ".scss": {
+              "syntax": "postcss-scss",
+              "plugins": [
+                "postcss-nested"
+              ]
+            }
+          }
+        }]
+      ]
+    },
+    "production": {
+      "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+      ],
+      "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-object-rest-spread",
+        ["@babel/plugin-transform-runtime", { "regenerator": true }],
+        ["react-css-modules", {
+          "webpackHotModuleReloading": true,
+          "autoResolveMultipleImports": true,
+          "generateScopedName": "[hash:base64:5]",
+          "filetypes": {
+            ".scss": {
+              "syntax": "postcss-scss",
+              "plugins": [
+                "postcss-nested"
+              ]
+            }
+          }
+        }]
+      ]
+    }
+  }
+}

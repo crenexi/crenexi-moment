@@ -1,0 +1,76 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2019,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": ["airbnb"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "jsx-a11y",
+    "import"
+  ],
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "globals": {
+    "document": "readonly",
+    "navigator": "readonly",
+    "window": "readonly"
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.js"
+      }
+    }
+  },
+  "rules": {
+    "no-unused-vars": 1,
+    "comma-dangle": [2, "always-multiline"],
+    "array-bracket-spacing": [2, "never"],
+    "brace-style": [2, "1tbs", { "allowSingleLine": true }],
+    "camelcase": [1, { "properties": "always" }],
+    "comma-spacing": [2, { "before": false, "after": true }],
+    "comma-style": 2,
+    "computed-property-spacing": [2, "never"],
+    "eol-last": 1,
+    "indent": [2, 2, { "SwitchCase": 1 }],
+    "key-spacing": [2, { "afterColon": true }],
+    "lines-around-comment": [2, { "beforeBlockComment": true, "allowBlockStart": true }],
+    "no-multiple-empty-lines": 2,
+    "no-spaced-func": 2,
+    "no-trailing-spaces": [2, { "skipBlankLines": false }],
+    "quotes": [2, "single", { "allowTemplateLiterals": true }],
+    "semi-spacing": [2, { "after": true }],
+    "space-before-blocks": [2, "always"],
+    "space-infix-ops": 2,
+    "arrow-parens": [2, "as-needed", { "requireForBlockBody": true }],
+    "arrow-spacing": [2, { "before": true, "after": true }],
+    "arrow-body-style": 0,
+    "no-const-assign": 2,
+    "no-this-before-super": 2,
+    "no-var": 2,
+    "max-len": 0,
+    "object-curly-newline": [2, {
+      "ObjectExpression": { "minProperties": 7, "multiline": true, "consistent": true },
+      "ObjectPattern": { "minProperties": 7, "multiline": true, "consistent": true },
+      "ImportDeclaration": { "minProperties": 7, "multiline": true, "consistent": true },
+      "ExportDeclaration": { "minProperties": 7, "multiline": true, "consistent": true },
+    }],
+    "no-shadow": 0,
+    "prefer-destructuring": 0,
+    "import/no-extraneous-dependencies": [2, {"devDependencies": true}],
+    "react/jsx-one-expression-per-line": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/state-in-constructor": [2, "never"],
+    "react/jsx-fragments": [1, "element"]
+  }
+}
